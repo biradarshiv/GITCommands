@@ -1,0 +1,27 @@
+git branch bugFix ---------- be there
+git checkout bugFix ---------- point to the bugFix
+git commit ---------- now commit for bugFix
+git rebase master ---------- to rebase the code sequentially * on bugFix
+git checkout c4 ---------- Head -> c4
+git checkout master^ ---------- move HEAD one up
+git checkout HEAD^ ---------- move 1 HEAD up
+git checkout HEAD~4 ---------- move HEAD up by 4
+git branch -f master HEAD~3 ---------- move master up by 3 head
+git branch -f master HEAD ---------- focefully move master to the place of HEAD
+git reset HEAD~1 ---------- local branch
+git revert HEAD ---------- remote branch (Pushed)
+git cherry -pick <Commit1C1><Commit2C2><Commit3C3><....> ---------- copy series of commits C1,C2,C3 below current HEAD location
+git rebase -i HEAD~4 ---------- will open a new window with  ---------- previous 4 commits including HEAD, allows to pick/order/smash commits
+git rebase -i ---------- commit --amend ---------- git rebase -i
+git tag Ver1 C1  ---------- git tag Ver1
+git checkout Ver1 ---------- will create another commit and start another tree
+git describe <ref> ---------- <ref> is anything that can resolve into commit . HEAD will be taken if no <ref> is specified
+output is like <tag>_<num Commits>_g<hash>
+git checkout HEAD~^2~2 ---------- 2nd branch up by 4 levels of commit
+git checkout HEAD^2 ---------- go to second branch
+
+git clone ssh://........git
+cd get inside the folder
+git fetch origin feature/jira
+git checkout feature/jira...
+
