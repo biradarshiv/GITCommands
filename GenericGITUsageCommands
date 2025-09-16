@@ -1,0 +1,39 @@
+------------------------------------------------------------------------------------------
+-- GET THINGS FROM SOURCE 
+git clone ssh://git@bitbucket.YOUR COMPLETE GIT URL OBTAINED FROM UI.git
+git checkout main
+git pull
+------------------------------------------------------------------------------------------
+---- DO THE CHANGES FOR ALL YOUR INDIVIDUAL BRANCHES
+git branch
+git checkout -b BRANCH_NAME_HERE
+git add .
+find . -name .DS_Store -print0 | xargs -0 git rm -rf --ignore-unmatch
+git commit -m "BRANCH_NAME_HERE - PROVIDE COMMENT ABOUT WHAT ALL HAS BEEN DONE HERE"
+git push
+git branch -D BRANCH_NAME_HERE
+------------------------------------------------------------------------------------------
+---- DO THE CONFIGURATION TO IGNORE THE CASE, OTHERWISE THERE WILL BE DUPLICATE FILES WHEN CHECKEDIN
+git config core.ignorecase false
+------------------------------------------------------------------------------------------
+---- Delete a branch 
+git switch main
+git branch -D BRANCH_NAME_HERE
+git push origin --BRANCH_NAME_HERE
+git commit -m "BRANCH_NAME_HERE - Delted Branch"
+git push
+------------------------------------------------------------------------------------------
+----- Create a new branch for new work
+git switch main
+git checkout -b BRANCH_NAME_HERE
+git switch BRANCH_NAME_HERE
+git add .
+find . -name .DS_Store -print0 | xargs -0 git rm -rf --ignore-unmatch
+git commit -m "BRANCH_NAME_HERE - Comments."
+git push
+git push --set-upstream origin BRANCH_NAME_HERE
+------------------------------------------------------------------------------------------
+---- ONE TIME CONFIGURATION IF NEEDED
+git config --global user.email "YOUR EMAIL ID"
+git config --global user.name "YOUR GLOBAL USERNAME"
+
